@@ -48,6 +48,7 @@
   --font-brood: "open_sansregular", Verdana, sans-serif;
   --kleur_wit: #f8f7f3;
   --kleur_zwart: #303030;
+  --kleur_zwart_licht:#525151;
   --kleur_groen: #008000;
   --kleur_groen_licht: #99ff99;
 
@@ -76,18 +77,16 @@ body {
   font-weight: 400;
   line-height: 150%;
   background-color: var(--kleur_wit);
+  color: var(--kleur_zwart);
 }
 #container {
   margin: 0 auto;
   width: 1200px;
 }
-header {
-  color: var(--kleur_groen_licht);
-  background-color: var(--kleur_groen);
-}
+
 nav {
   display: flex;
-  padding: 25px;
+  padding: 2rem;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -96,33 +95,32 @@ nav ul li {
   display: inline-block;
 }
 nav ul li a {
-  padding: 25px;
+  padding: 2rem;
   text-align: center;
   text-decoration: none;
 }
 a:link,
 a:visited {
-  color: var(--kleur_groen_licht);
-  background-color: var(--kleur_groen);
+  background-color: var(--kleur_wit);
+  color: var(--kleur_zwart);
   text-decoration: none;
   padding: 3px;
 }
 a:hover,
 a:active {
-  color: var(--kleur_groen);
-  background-color: var(--kleur_groen_licht);
+  background-color: var(--kleur_zwart);
+  color: var(--kleur_wit);
 }
 .sectie_1,
 header,
 footer {
   margin: 0 60px 0 40px;
-  padding: 25px;
-  color: var(--kleur_groen_licht);
-  background-color: var(--kleur_groen);
+  padding: 2rem;
 }
+
 h1 {
   font-family: var(--font_titel);
-  padding: 20px;
+  padding: 2rem;
   border-bottom: var(--kleur_groen_licht) 2px inset;
   text-align: center;
 
@@ -130,8 +128,8 @@ h1 {
 .sectie_1 h2 {
   font-family: var(--font_subtitel);
   margin: 30px 0 15px 0;
-  padding: 50px;
-  text-shadow: 5px 5px black;
+  padding: 2rem;
+
 }
 
 p {
@@ -143,8 +141,8 @@ p {
   width: 0.7em;
   font-size: 400%;
   line-height: 80%;
-  margin-top: -45px;
-  margin-right: -25px;
+  margin-top: -40px;
+  margin-right: -35px;
 }
 .held {
   border-radius: 15px;
@@ -154,13 +152,11 @@ p {
 .sectie_2,
 .sectie_3 {
   margin: 0 60px 0 40px;
-  padding: 25px;
-  color: var(--kleur_groen);
-  background-color: var(--kleur_groen_licht);
+  padding: 2rem;
 }
 .sectie_2 h2 {
   text-align: center;
-  padding: 50px;
+  padding: 2rem;
 }
 #gallery {
   display: flex;
@@ -193,7 +189,7 @@ blockquote {
   width: 75%;
   position: relative;
   margin: 100px auto;
-  padding: 40px 80px;
+  padding: 2rem 4rem;
   border-radius: 15px;
   background: var(--kleur_wit);
 }
@@ -211,7 +207,6 @@ blockquote::after {
 }
 blockquote::before,
 blockquote::after {
-  background-color: var(--kleur_groen_licht);
   display: block;
   width: 60px;
   height: 60px;
