@@ -124,10 +124,11 @@ a:active {
 /*      */
 /*      */
 
-.sectie_1 {
-  background-color: #008000;
+section {
   position: relative;
   padding: 1rem;
+  margin: 2rem 0 10rem 0;
+  
 }
 h1 {
   font-family: var(--font_titel);
@@ -256,11 +257,7 @@ p {
   border-radius: 50px 50px 50px 0;
   transform: rotate(45deg);
 }
-.sectie_2,
-.sectie_3 {
-  margin: 0 60px 0 40px;
-  padding: 2rem;
-}
+
 .sectie_2 h2 {
   text-align: center;
   padding: 2rem;
@@ -289,16 +286,18 @@ p {
   align-items: center;
 } */
 blockquote {
-  font-style: italic;
-  color: #333;
-  line-height: 150%;
-  font-size: 1.2em;
-  width: 75%;
   position: relative;
   margin: 100px auto;
+  width: 63%;
   padding: 2rem 4rem;
   border-radius: 15px;
   background: var(--kleur_wit);
+  color: var(--kleur_zwart);
+  font-style: italic;
+  font-size: 1.2em;
+  
+  
+  
 }
 
 blockquote::before {
