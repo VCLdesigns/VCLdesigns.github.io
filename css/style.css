@@ -1,4 +1,57 @@
-/* copyright 2022 @Victor Loots*/
+/* © Victor Loots, 2022
+/*
+/*
+/* Fonts */
+@font-face {
+  font-family: "domineregular";
+  src: url("../fonts/domine-regular-webfont.eot");
+  src: url("../fonts/domine-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/domine-regular-webfont.woff2") format("woff2"),
+    url("../fonts/domine-regular-webfont.woff") format("woff"),
+    url("../fonts/domine-regular-webfont.ttf") format("truetype"),
+    url("../fonts/domine-regular-webfont.svg#domineregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "montserratregular";
+  src: url("../fonts/montserrat-regular-webfont.eot");
+  src: url("../fonts/montserrat-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/montserrat-regular-webfont.woff2") format("woff2"),
+    url("../fonts/montserrat-regular-webfont.woff") format("woff"),
+    url("../fonts/montserrat-regular-webfont.ttf") format("truetype"),
+    url("../fonts/montserrat-regular-webfont.svg#montserratregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sansregular";
+  src: url("../fonts/opensans-regular-webfont.eot");
+  src: url("../fonts/opensans-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("../fonts/opensans-regular-webfont.woff") format("woff"),
+    url("../fonts/opensans-regular-webfont.ttf") format("truetype"),
+    url("../fonts/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+/* Variabelen */
+
+:root {
+  --font_titel: "domineregular", Georgia, serif;
+  --font_subtitel: "montserratregular", Verdana, sans-serif;
+  --font-brood: "open_sansregular", Verdana, sans-serif;
+  --kleur_wit: #f8f7f3;
+  --kleur_zwart: #303030;
+  --kleur_groen: #008000;
+  --kleur_groen_licht: #99ff99;
+
+}
 
 /* Reset */
 
@@ -10,13 +63,6 @@
   box-sizing: border-box;
 }
 
-/*Var*/
-
-:root {
-  --darkgreen: #008000;
-  --lightgreen: #99ff99;
-  --brokenwhite: #f8f7f3;
-}
 /*Adds*/
 
 img {
@@ -24,19 +70,20 @@ img {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-brood);
   font-size: 1.5em;
   font-variant: normal;
   font-weight: 400;
-  background-color: var(--brokenwhite);
+  line-height: 150%;
+  background-color: var(--kleur_wit);
 }
 #container {
   margin: 0 auto;
   width: 1200px;
 }
 header {
-  color: var(--lightgreen);
-  background-color: var(--darkgreen);
+  color: var(--kleur_groen_licht);
+  background-color: var(--kleur_groen);
 }
 nav {
   display: flex;
@@ -55,30 +102,33 @@ nav ul li a {
 }
 a:link,
 a:visited {
-  color: var(--lightgreen);
-  background-color: var(--darkgreen);
+  color: var(--kleur_groen_licht);
+  background-color: var(--kleur_groen);
   text-decoration: none;
   padding: 3px;
 }
 a:hover,
 a:active {
-  color: var(--darkgreen);
-  background-color: var(--lightgreen);
+  color: var(--kleur_groen);
+  background-color: var(--kleur_groen_licht);
 }
 .sectie_1,
 header,
 footer {
   margin: 0 60px 0 40px;
   padding: 25px;
-  color: var(--lightgreen);
-  background-color: var(--darkgreen);
+  color: var(--kleur_groen_licht);
+  background-color: var(--kleur_groen);
 }
 h1 {
+  font-family: var(--font_titel);
   padding: 20px;
-  border-bottom: var(--lightgreen) 2px inset;
+  border-bottom: var(--kleur_groen_licht) 2px inset;
   text-align: center;
+
 }
 .sectie_1 h2 {
+  font-family: var(--font_subtitel);
   margin: 30px 0 15px 0;
   padding: 50px;
   text-shadow: 5px 5px black;
@@ -105,8 +155,8 @@ p {
 .sectie_3 {
   margin: 0 60px 0 40px;
   padding: 25px;
-  color: var(--darkgreen);
-  background-color: var(--lightgreen);
+  color: var(--kleur_groen);
+  background-color: var(--kleur_groen_licht);
 }
 .sectie_2 h2 {
   text-align: center;
@@ -120,7 +170,7 @@ p {
 .preview {
   width: 250px;
   height: 200px;
-  border: var(--darkgreen) solid 1px;
+  border: var(--kleur_groen) solid 1px;
   display: inline-block;
   border-radius: 35px;
   text-align: center;
@@ -145,7 +195,7 @@ blockquote {
   margin: 100px auto;
   padding: 40px 80px;
   border-radius: 15px;
-  background: var(--brokenwhite);
+  background: var(--kleur_wit);
 }
 
 blockquote::before {
@@ -161,7 +211,7 @@ blockquote::after {
 }
 blockquote::before,
 blockquote::after {
-  background-color: var(--lightgreen);
+  background-color: var(--kleur_groen_licht);
   display: block;
   width: 60px;
   height: 60px;
